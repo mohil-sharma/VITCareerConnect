@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal - Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+
+    <div class="signup-container">
+        <h2>Create Your Account</h2>
+        <p>Join us and start applying for your dream job!</p>
+
+        <form id="signup-form">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your full name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter a strong password" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+            <label for="job-role">Job Role</label>
+            <select id="job-role" required>
+                <option value="">Select your desired role</option>
+                <option value="Software Developer">Software Developer</option>
+                <option value="UI/UX Designer">UI/UX Designer</option>
+                <option value="Project Manager">Project Manager</option>
+                <option value="Data Analyst">Data Analyst</option>
+                <option value="Marketing Specialist">Marketing Specialist</option>
+            </select>
+
+            <label for="experience">Years of Experience</label>
+            <input type="number" id="experience" placeholder="Enter years of experience" min="0" required>
+
+            <label for="skills">Key Skills</label>
+            <input type="text" id="skills" placeholder="E.g., JavaScript, Python, SEO" required>
+
+            <label for="resume">Upload Resume (PDF only)</label>
+            <input type="file" id="resume" accept=".pdf" required>
+
+            <button type="submit">Register</button>
+        </form>
+
+        <p>Already have an account? <a href="login.html">Login here</a></p>
+        <p id="message"></p>
+    </div>
+
+    <script src="signup.js"></script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 body {
     margin:0;
     
-    animation: breathing 8s infinite alternate ease-in-out;
+    animation: breathing 7s alternate ease-in infinite ;
 }
 
 /* Background Animation */
@@ -14,7 +14,7 @@ body::before {
     height: 100%;
     background: linear-gradient(120deg, #7f8b9e, #bed6e5, #f7f7f8);
     background-size: 200% 200%;
-    animation: gradientMove 10s infinite linear;
+    animation: gradientMove 5s infinite linear;
     z-index: -1;
 }
 
@@ -26,21 +26,18 @@ body::before {
 
 @keyframes breathing {
     0% { transform: scale(1); }
-    100% { transform: scale(1.02); }
+    50% { transform: scale(1.005); } /* Reduce scaling */
+    100% { transform: scale(1); }
 
 position: relative;
 
-animation: gradientShift 15s ease infinite;
+animation: gradientShift 2s ease infinite;
 }
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-}
-
-body {
-    background-color: #f8f8f8;
 }
 
 .navbar {
@@ -92,7 +89,7 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    right: 0;
+    left:0;
     background: white;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     width: auto;
