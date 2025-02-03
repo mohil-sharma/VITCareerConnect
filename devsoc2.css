@@ -51,10 +51,21 @@ body {
     padding: 15px 30px;
     border-bottom: 2px solid #ddd;
 }
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
+.logo{
+    width: 100px;  /* Adjust the size of the div */
+            height: 100px;
+            display: flex;
+            justify-content: stretch;
+            align-items: stretch;
+            align-content: center;
+            background-color: #1a1a1a; /* Optional: Background color */
+            border-radius: 10px;
+     
+}
+.logo img{
+    width: 80px;  /* Adjust logo size */
+            height: 70px;
+            padding: 0%;
 }
 
 .nav-links {
