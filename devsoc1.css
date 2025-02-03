@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: white;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-buttons button {
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+    border-radius: 4px;
+}
+
+.help-btn {
+    background: white;
+    border: 1px solid black;
+}
+
+.contact-btn {
+    background: black;
+    color: white;
+    border: none;
+}
+
+.hero-section {
+    display: flex;
+    padding: 5% 5%;
+    gap: 2rem;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 2rem;
+    animation: slide-in 1s ease-out forwards;
+}
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.signup-btn {
+    padding: 0.8rem 2rem;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.learn-btn {
+    padding: 0.8rem 2rem;
+    background: white;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.image-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.image-grid div {
+    background: #eee;
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+    animation: float-images 3s ease-in-out infinite;
+}
+
+/* Alternate timing for different images */
+.image-grid div:nth-child(2) {
+    animation-delay: 0.5s;
+}
+.image-grid div:nth-child(3) {
+    animation-delay: 1s;
+}
+.image-grid div:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+@keyframes float-images {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content {
+    flex: 1;
+    padding-right: 4rem;
+}
+
+.label {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #4a4a4a;
+    margin-bottom: 2rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.join-btn {
+    padding: 0.8rem 2rem;
+    border: 1px solid #000;
+    background: transparent;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.explore-btn {
+    padding: 0.8rem 2rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.image-placeholder {
+    flex: 1;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 2rem;
+    }
+    
+    .content {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+
+
+
+
+
+
+.features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.feature-card {
+    width: 350px;
+    height: 200px;
+
+  
+}
+
+.feature-image {
+    width: 350px;
+  height: 200px;
+  overflow: hidden;
+}
+.feature-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.feature-description {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.feature-button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+
+.feature-button:hover {
+    opacity: 0.7;
+}
+
+.feature-button::after {
+    content: "›";
+    margin-left: 5px;
+}
