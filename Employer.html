@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employer Dashboard</title>
+    <link rel="stylesheet" href="Employer.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#student-profiles">Student Profiles</a></li>
+                <li><a href="#job-listings">Job Listings</a></li>
+                <li><a href="#applications">Applications</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="dashboard">
+            <h1>Welcome, Employer!</h1>
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <h3>Active Job Listings</h3>
+                    <p>5</p>
+                </div>
+                <div class="stat-card">
+                    <h3>New Applications</h3>
+                    <p>12</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Interviews Scheduled</h3>
+                    <p>3</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="student-profiles">
+            <h2>Student Profiles</h2>
+            <div class="student-grid">
+                <div class="student-card">
+                    <img src="student1.jpg" alt="Student 1">
+                    <h3>John Doe</h3>
+                    <p>Computer Science</p>
+                    <button class="view-profile">View Profile</button>
+                </div>
+                <div class="student-card">
+                    <img src="student2.jpg" alt="Student 2">
+                    <h3>Jane Smith</h3>
+                    <p>Electrical Engineering</p>
+                    <button class="view-profile">View Profile</button>
+                </div>
+                <!-- Add more student cards as needed -->
+            </div>
+        </section>
+
+        <section id="job-listings">
+            <h2>Job Listings</h2>
+            <button class="create-job">Create New Job Listing</button>
+            <div class="job-list">
+                <div class="job-card">
+                    <h3>Software Developer</h3>
+                    <p>Full-time • Remote</p>
+                    <p>Posted 2 days ago</p>
+                    <div class="job-actions">
+                        <button class="edit-job">Edit</button>
+                        <button class="view-applicants">View Applicants</button>
+                    </div>
+                </div>
+                <div class="job-card">
+                    <h3>Data Analyst</h3>
+                    <p>Part-time • On-site</p>
+                    <p>Posted 5 days ago</p>
+                    <div class="job-actions">
+                        <button class="edit-job">Edit</button>
+                        <button class="view-applicants">View Applicants</button>
+                    </div>
+                </div>
+                <!-- Add more job cards as needed -->
+            </div>
+        </section>
+
+        <section id="applications">
+            <h2>Recent Applications</h2>
+            <table class="applications-table">
+                <thead>
+                    <tr>
+                        <th>Applicant Name</th>
+                        <th>Position</th>
+                        <th>Date Applied</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Alice Johnson</td>
+                        <td>Software Developer</td>
+                        <td>2023-05-15</td>
+                        <td>Under Review</td>
+                        <td><button class="review-application">Review</button></td>
+                    </tr>
+                    <tr>
+                        <td>Bob Williams</td>
+                        <td>Data Analyst</td>
+                        <td>2023-05-14</td>
+                        <td>Interviewed</td>
+                        <td><button class="review-application">Review</button></td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Employer Dashboard. All rights reserved.</p>
+    </footer>
+</body>
+</html>
