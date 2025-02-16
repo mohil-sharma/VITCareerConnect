@@ -538,8 +538,10 @@ a {
 /* Team Section */
 .team-section {
     text-align: center;
-    padding: 80px 20px;
-    background-color: #fff;
+    height: 100%;
+    padding: 40px 20px;
+    background-color: #1d1b1b;
+    box-sizing: border-box;
 }
 
 .team-section h2 {
@@ -558,7 +560,7 @@ a {
     width: 250px;
     text-align: center;
     padding: 20px;
-    background-color: #f4f4f9;
+    background-color: #f5f5fd;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;

@@ -16,10 +16,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "PORT=3001 react-scripts start"
   },
   "name": "portfolio",
   "version": "1.0.0",
   "main": "index.js",
   "type": "module"
+  
 }
