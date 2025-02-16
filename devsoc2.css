@@ -1,7 +1,7 @@
 body {
-    margin:0;
-    
-    animation: breathing 7s alternate ease-in infinite ;
+    margin: 0;
+    color: white;
+    animation: breathing 7s alternate ease-in infinite;
 }
 
 /* Background Animation */
@@ -12,10 +12,16 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(120deg, #7f8b9e, #bed6e5, #f7f7f8);
     background-size: 200% 200%;
-    animation: gradientMove 5s infinite linear;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at center, rgba(30, 30, 60, 1) 0%, rgba(10, 10, 30, 1) 80%);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: -1;
+    animation: gradientShift 2s ease infinite;
 }
 
 @keyframes gradientMove {
@@ -28,41 +34,40 @@ body::before {
     0% { transform: scale(1); }
     50% { transform: scale(1.005); } /* Reduce scaling */
     100% { transform: scale(1); }
-
-position: relative;
-
-animation: gradientShift 2s ease infinite;
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+    color: white;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: white;
+    background: rgb(15, 15, 15);
     padding: 15px 30px;
     border-bottom: 2px solid #ddd;
 }
-.logo{
-    width: 100px;  /* Adjust the size of the div */
-            height: 100px;
-            display: flex;
-            justify-content: stretch;
-            align-items: stretch;
-            align-content: center;
-            background-color: #1a1a1a; /* Optional: Background color */
-            border-radius: 10px;
-     
+
+.logo {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    align-content: center;
+    background-color: #1a1a1a;
+    border-radius: 10px;
 }
-.logo img{
-    width: 80px;  /* Adjust logo size */
-            height: 70px;
-            padding: 0%;
+
+.logo img {
+    width: 80px;
+    height: 70px;
+    padding: 0%;
 }
 
 .nav-links {
@@ -77,7 +82,7 @@ animation: gradientShift 2s ease infinite;
 
 .nav-links a {
     text-decoration: none;
-    color: black;
+    color: rgb(90, 41, 187);
     font-size: 16px;
     padding: 10px 15px;
 }
@@ -89,14 +94,13 @@ animation: gradientShift 2s ease infinite;
 .dropdown-content {
     display: none;
     position: absolute;
-    left:0;
-    background: white;
+    left: 0;
+    background: rgb(15, 15, 15);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     width: auto;
     padding: 15px;
     border-radius: 5px;
     z-index: 10;
-    
 }
 
 .dropdown:hover .dropdown-content {
@@ -114,11 +118,12 @@ animation: gradientShift 2s ease infinite;
     font-size: 14px;
     margin-bottom: 10px;
     font-weight: bold;
+    color: white;
 }
 
 .dropdown-section a {
     text-decoration: none;
-    color: #333;
+    color: white;
     font-size: 14px;
     padding: 5px 0;
 }
@@ -134,11 +139,11 @@ animation: gradientShift 2s ease infinite;
 
 .btn {
     padding: 8px 15px;
-    border: none;
-    background: white;
+    border: 1px solid white;
+    background: transparent;
     cursor: pointer;
     font-size: 14px;
-    border: 1px solid black;
+    color: white;
 }
 
 .btn-dark {
@@ -157,6 +162,7 @@ animation: gradientShift 2s ease infinite;
     padding-right: 2rem;
     animation: slide-in 1s ease-out forwards;
 }
+
 @keyframes slide-in {
     from {
         opacity: 0;
@@ -172,38 +178,46 @@ h1 {
     font-size: 3.5rem;
     line-height: 1.2;
     margin-bottom: 1.5rem;
+    color: white;
+    font-weight: bold;
 }
 
 p {
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 2rem;
+    color: white;
 }
 
-.cta-buttons {
+.cta-buttons, .buttons {
     display: flex;
     gap: 1rem;
 }
 
-.signup-btn {
+.signup-btn, .join-btn {
     padding: 0.8rem 2rem;
     background: black;
     color: white;
-    border: none;
+    border: 1px solid white;
     border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
 }
 
-.learn-btn {
+.learn-btn, .explore-btn {
     padding: 0.8rem 2rem;
-    background: white;
-    border: 1px solid black;
+    background: transparent;
+    border: 1px solid white;
     border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
 }
 
 .image-grid {
     width: 800px;
-  height: 100%;
-  overflow: hidden;
+    height: 100%;
+    overflow: hidden;
 }
 
 .image-grid div {
@@ -237,10 +251,6 @@ p {
     }
 }
 
-
-
-
-
 .container {
     display: flex;
     justify-content: space-between;
@@ -259,49 +269,106 @@ p {
     font-weight: 500;
     margin-bottom: 1rem;
     display: block;
+    color: white;
 }
 
-h1 {
-    font-size: 3.5rem;
-    font-weight: bold;
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
-}
-
-p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #4a4a4a;
-    margin-bottom: 2rem;
-}
-
-.buttons {
-    display: flex;
-    gap: 1rem;
-}
-
-.join-btn {
-    padding: 0.8rem 2rem;
-    border: 1px solid #000;
-    background: transparent;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-.explore-btn {
-    padding: 0.8rem 2rem;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    font-size: 1rem;
+.image-placeholder, .image-section {
+    width: 600px;
+    height: 100%;
+    overflow: hidden;
+    background-color: #e6e6e6;
     display: flex;
     align-items: center;
+    justify-content: center;
+    border-radius: 4px;
 }
 
-.image-placeholder {
-    width: 600px;
-  height: 100%;
-  overflow: hidden;
+.image-section img {
+    width: 120px;
+    height: 120px;
+}
+
+.features-container, .job-portal {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: white;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 20px;
+}
+
+.feature-image {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.feature-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: white;
+}
+
+.feature-description {
+    color: white;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.feature-button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+
+.feature-button:hover {
+    opacity: 0.7;
+}
+
+.feature-button::after {
+    content: "›";
+    margin-left: 5px;
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.benefits-container {
+    display: flex;
+    gap: 30px;
+}
+
+.benefit-card {
+    flex: 1;
+}
+
+.benefit-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: white;
 }
 
 @media (max-width: 768px) {
@@ -318,127 +385,397 @@ p {
     h1 {
         font-size: 2.5rem;
     }
-}
-
-
-
-
-
-
-
-.features-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    font-family: Arial, sans-serif;
-}
-
-.main-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 60px;
-}
-
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.feature-card {
-    text-align: center;
-    padding: 20px;
-}
-
-.feature-image {
-    width: 300px;
-  height: 200px;
-  overflow: hidden;
-}
-.feature-title {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-
-.feature-description {
-    color: #666;
-    margin-bottom: 20px;
-    line-height: 1.5;
-}
-
-.feature-button {
-    display: inline-block;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-    transition: opacity 0.3s;
-}
-
-.feature-button:hover {
-    opacity: 0.7;
-}
-
-.feature-button::after {
-    content: "›";
-    margin-left: 5px;
-}
-
-
-
-.job-portal {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-}
-
-h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.description {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 40px;
-}
-
-.benefits-container {
-    display: flex;
-    gap: 30px;
-}
-
-.benefit-card {
-    flex: 1;
-}
-
-.benefit-card h2 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-}
-
-.benefit-card p {
-    font-size: 1rem;
-    line-height: 1.5;
-}.image-section {
-    background-color: #e6e6e6;
-    aspect-ratio: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
-}
-
-.image-section img {
-    width: 120px;
-    height: 120px;
-
-}
-
-@media (max-width: 768px) {
+    
     .job-portal {
         grid-template-columns: 1fr;
     }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Section */
+.header {
+    background-color: #f4f7f8;
+    color: #120707;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin: 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.header p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.header button {
+    margin: 10px;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.signup-btn {
+    background-color: #fff;
+    color: #000;
+}
+
+.signup-btn:hover {
+    background-color: #ff6f61;
+    color: #fff;
+}
+
+.login-btn {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.login-btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Benefits Section */
+.benefits-section {
+    display: flex;
+    padding: 80px 50px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    margin: 50px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.benefits-text {
+    max-width: 500px;
+}
+
+.benefits-text h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.benefits-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+.benefits-image {
+    width: 300px;
+    height: 300px;
+    background: #ddd;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    animation: float 4s ease-in-out infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.benefits-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff6f61, #ffcc00);
+    opacity: 0.8;
+    z-index: -1;
+}
+
+.benefits-image::after {
+    content: '93.4% Placement Completed';
+    color: rgb(20, 17, 17);
+    position: absolute;
+    z-index: 1;
+}
+
+/* Testimonial Section */
+.testimonial {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #371031;
+    color: #fff;
+}
+
+.testimonial p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.testimonial blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin: 20px 0;
+}
+
+.testimonial strong {
+    font-size: 1.2rem;
+}
+
+/* Team Section */
+.team-section {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #fff;
+}
+
+.team-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.team-member {
+    width: 250px;
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.team-member img {
+    width: 100%;
+    height: 150px;
+    background: #ddd;
+    border-radius: 10px;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.team-member p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Hiring Section */
+.hiring {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #ffcc00;
+    color: #000;
+}
+
+.hiring h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hiring button {
+    padding: 15px 30px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.hiring button:hover {
+    background-color: #b86dd3;
+    color: #fff;
+}
+
+/* Subscribe Section */
+.subscribe {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.subscribe h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.subscribe input {
+    padding: 15px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.subscribe button {
+    padding: 15px 30px;
+    background-color: #e159ca;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.subscribe button:hover {
+    background-color: #ffcc00;
+    color: #000;
+}
+
+/* Footer Section */
+.footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+    border-top: 1px solid #ddd;
+    background: #f8f8f8;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer div {
+    max-width: 200px;
+}
+
+.footer h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.footer p {
+    font-size: 1rem;
+    color: #666;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.footer p:hover {
+    color: #e364e8;
+}
+
+.logo {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.logo:last-child {
+    background-color: #000;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes spinText {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Enhanced Header Animation */
+.header h1 {
+    animation: slideInLeft 1.5s ease-in-out;
+}
+
+.header p {
+    animation: slideInRight 1.5s ease-in-out;
+}
+
+.header button {
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+/* Enhanced Benefits Section Animation */
+.benefits-text {
+    animation: slideInLeft 1.5s ease-in-out;
+}
+
+.benefits-image {
+    animation: slideInRight 1.5s ease-in-out, float 4s ease-in-out infinite;
+}
+
+/* Enhanced Testimonial Section Animation */
+.testimonial {
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Enhanced Team Section Animation */
+.team-member {
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Enhanced Hiring Section Animation */
+.hiring {
+    animation: pulse 2s infinite;
+}
+
+/* Enhanced Subscribe Section Animation */
+.subscribe {
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Enhanced Footer Section Animation */
+.footer {
+    animation: fadeIn 2s ease-in-out;
 }
